@@ -7,7 +7,7 @@ options =
 	background: true
 	basePath: DIST_DIRECTORY
 	browsers: [
-		'PhantomJS'
+		'Chrome'
 	]
 	colors: true
 	coverageReporter:

@@ -10,7 +10,6 @@ exports.getScriptSources = (ext) ->
 		.concat if not runSpecs       then ["!**/*.spec#{ext}"]    else []
 
 exports.notify = (message, success = true) ->
-	console.log 'notify', message
 	bs.notify message
 	# notifier.notify
 	# 	title    : 'Fatarrow'
