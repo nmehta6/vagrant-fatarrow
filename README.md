@@ -13,7 +13,7 @@
 - Install [Vagrant](http://www.vagrantup.com/downloads)
 - Run `vagrant up`. This will provision the box
 - Run `vagrant ssh` to access the box
-- Run `export DISPLAY=:10` (this is temporary due to a bug in provisioning)
+- Run `export DISPLAY=:10` (this is required each time you ssh into the box)
 - Run `cd /fatarrow`. This is where the source is located
 - Run `npm install`
 - Run `gulp`
