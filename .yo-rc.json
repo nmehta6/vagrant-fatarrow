@@ -1,0 +1,12 @@
+{
+  "generator-fatarrow": {
+    "appname": "fatarrow",
+    "appdescription": "a fatarrow app",
+    "scriptLanguages": [
+      "coffeeScript"
+    ],
+    "styleLanguages": [],
+    "templateLanguages": [],
+    "version": "1.4.0"
+  }
+}
