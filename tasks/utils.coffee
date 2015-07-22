@@ -1,3 +1,4 @@
+bs         = require 'browser-sync'
 isWindows  = /^win/.test(process.platform)
 notifier   = require 'node-notifier'
 path       = require 'path'
@@ -9,12 +10,14 @@ exports.getScriptSources = (ext) ->
 		.concat if not runSpecs       then ["!**/*.spec#{ext}"]    else []
 
 exports.notify = (message, success = true) ->
-	notifier.notify
-		title    : 'Fatarrow'
-		message  : message
-		icon     : path.join __dirname, if success then 'assets/gulp.png' else 'assets/gulp-error.png'
-		# this will pop up notifications in separate groups
-		group    : 'fatarrow'
+	console.log 'notify', message
+	bs.notify message
+	# notifier.notify
+	# 	title    : 'Fatarrow'
+	# 	message  : message
+	# 	icon     : path.join __dirname, if success then 'assets/gulp.png' else 'assets/gulp-error.png'
+	# 	# this will pop up notifications in separate groups
+	# 	group    : 'fatarrow'
 
 exports.unixifyPath = (p) ->
 	p.replace /\\/g, '/'
